@@ -1,0 +1,23 @@
+*{
+    margin: o;
+    padding: 0;
+}
+
+.back{
+    background-image: url(img/familiabg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo{
+    width: 50%;
+    color: red;
+
+}
+
+.formulario{
+    width: 49%;
+}
+
