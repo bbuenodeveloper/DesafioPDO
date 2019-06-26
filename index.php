@@ -17,21 +17,16 @@
 </nav>
 </header>
 
-<div class="back d-flex">
-    <div class="titulo">
+<section class="back">
+    <div>
         <h1>venha nós conhecer</h1>
         <p>Somos uma escola reconhecida mundialmente, para nós entrarmos em contato com você deixe seu email.</p>
     </div>
-    <div class="formulario">
         <form method="POST" action="funcao.php">
-            <div class="form-group">
-                <label for="emailUsuario">Email</label>
-                <input type="email" name="emailUsuario" class="form-control" id="emailUsuario" aria-describedby="emailHelp" placeholder="Email">
-            </div>
+                <input type="email" name="emailUsuario" class="form-control" id="emailUsuario" aria-describedby="emailHelp" placeholder="Digite seu Email">
                 <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-    </div>
-</div>
+</section>
   
   
 
