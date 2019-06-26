@@ -1,19 +1,22 @@
 <?php
-$dsn = "mysql:host=localhost; dbname=captura; port=3307";
-$user = "root";
-$pass = "";
 
-$conexao = new PDO($dsn, $user, $pass);
+include_once "conexao.php";
 
-$query = $conexao->prepare('INSERT INTO pessoa (email)
-VALUES("'.$_POST['emailUsuario'].'")');
-$resultado = $query->execute();
+try{
 
-if($resultado){
+    $query = $conexao->prepare('INSERT INTO pessoa (email) VALUES(?)');
+    $resultado = $query->execute([$_POST['emailUsuario']]);
+
+    if($resultado){
     echo "<h1>Seu cadastro foi concluido com sucesso!</h1>";
-}else{
+    }else{
     echo "<h1>Erro ao cadastrar!</h1>";
+    }
+
+}catch(PDOException $ex){
+    echo "<h1>Serviço indisponivel!</h1>";
 }
+
 
 
 ?>
